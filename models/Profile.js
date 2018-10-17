@@ -74,7 +74,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
       },
-      fieldOfStudy: {
+      fieldofstudy: {
         type: String,
         required: true
       },
@@ -95,9 +95,6 @@ const ProfileSchema = new Schema({
     }
   ],
   social: {
-    linkedin: {
-      type: String
-    },
     youtube: {
       type: String
     },
@@ -105,6 +102,9 @@ const ProfileSchema = new Schema({
       type: String
     },
     facebook: {
+      type: String
+    },
+    linkedin: {
       type: String
     },
     instagram: {
