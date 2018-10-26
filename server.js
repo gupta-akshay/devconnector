@@ -29,6 +29,16 @@ app.use(passport.initialize());
 // Passport Config
 require("./config/passport")(passport);
 
+// Add CORS Support
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 // Use Routes
 app.use("/api/users", users);
 app.use("/api/profile", profile);
